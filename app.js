@@ -15,8 +15,6 @@ var express = require("express"),
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
 
 // seedDB();
-// app.set('views', __dirname + '/views');
-// mongoose.connect("mongodb://azad:dashwood2019@ds253804.mlab.com:53804/yelp_camp", {useNewUrlParser : true});
 mongoose.connect(url, {useNewUrlParser : true});
 mongoose.set("useFindAndModify", false);
 app.use(bodyParser.urlencoded({extended : true}));
