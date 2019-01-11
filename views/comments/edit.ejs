@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<section id="addCamp">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-header text-center">
+            <h4>Edit Comment </h4>
+          </div>
+            <div class="card-block">
+              <form class="p-3" action="/campgrounds/<%=campground_id%>/comments/<%=comment._id%>?_method=PUT" method="POST">
+                
+                 <div class="form-group">
+                  <label for="comment">Comment : </label>
+                  <textarea class="form-control" rows="5" name="comment[text]"> <%=comment.text%> </textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<% include ../partials/footer %>
